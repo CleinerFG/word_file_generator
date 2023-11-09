@@ -24,3 +24,15 @@ O projeto é composto por duas partes principais:
 4. Execute o código para gerar os documentos a partir dos dados da planilha.
 
 Certifique-se de que os nomes das colunas na planilha Excel correspondam exatamente aos marcadores no modelo do Word para uma substituição precisa.
+
+## Contribuição
+
+Se você deseja contribuir para este projeto, sinta-se à vontade para criar novas funcionalidades, melhorar as existentes ou corrigir possíveis problemas. As contribuições são bem-vindas.
+
+## Autores
+
+Este projeto foi desenvolvido por Cleiner Ediel Furlani Garcia.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
