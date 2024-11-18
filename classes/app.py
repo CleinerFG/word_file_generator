@@ -93,14 +93,20 @@ class App:
         - Reading data from the Excel sheet.
         - Generating a Word document for each row of data.
         - Saving the generated documents in the output directory.
+        - Printing the row data
         
         Returns:
             None
         """
         App._create_output_dir()
-        for row in self._get_data:
+        for index, row in enumerate(self._get_data):
             word_file = DocxTemplate(self.__get_template_dir)
             word_file.render(row)
-            
+
             word_file.save(self.__create_unique_filename(row["id"]))
-            print(row) 
+
+            print(f'Row Index: {index}')
+            for k, v in row.items():
+                print(f'{k} -> {v}')
+            print('---------------------')
+
