@@ -13,16 +13,16 @@ class App:
         self._sheet_name = sheet_name
     
     @property
-    def _get_template_dir(self) -> str:
+    def __get_template_dir(self) -> str:
         return App.resource_dir + f'/{self._template_name}.docx'
 
     @property
-    def _get_sheet_dir(self) -> str:
+    def __get_sheet_dir(self) -> str:
         return f'{App.resource_dir}/{self._sheet_name}.xlsx'
 
     @property
     def _get_data(self) -> List[Dict]:
-        sheet = SheetHandler(self._get_sheet_dir)
+        sheet = SheetHandler(self.__get_sheet_dir)
         sheet.read_sheet()
         return sheet.data
 
@@ -31,13 +31,13 @@ class App:
         if not os.path.exists(cls.output_dir):
             os.makedirs(cls.output_dir)
 
-    def _create_unique_filename(self, identifier):
+    def __create_unique_filename(self, identifier):
         return f'{App.output_dir}/{self._outfile} - {identifier}.docx'
 
     def build(self):
         App._create_output_dir()
         for row in self._get_data:
-            word_file = DocxTemplate(self._get_template_dir)
+            word_file = DocxTemplate(self.__get_template_dir)
             word_file.render(row)
-            word_file.save(self._create_unique_filename(row["id"]))
+            word_file.save(self.__create_unique_filename(row["id"]))
             print(row)
