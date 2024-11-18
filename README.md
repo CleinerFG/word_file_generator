@@ -1,5 +1,10 @@
 # Word File Generator
 
+## Documentation Translation
+
+- [Read the documentation in pt-BR](README-pt-BR.md)
+
+
 ## Overview
 
 This project automates the process of generating Word documents based on data from an Excel sheet. The core functionality of the application includes reading data from a specified Excel sheet, rendering that data into a predefined Word template, and saving the resulting documents in an output directory. This allows for the efficient generation of multiple documents based on rows of data from the sheet.
