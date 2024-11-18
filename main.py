@@ -1,4 +1,4 @@
 from classes.app import App
 
-app = App("test")
+app = App("example")
 app.build()

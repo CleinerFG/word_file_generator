@@ -1,5 +1,5 @@
 import os
-from classes.extractdados import ExtractDados
+from classes.sheet_handler import SheetHandler
 from docxtpl import DocxTemplate
 from typing import Dict, List
 
@@ -22,7 +22,7 @@ class App:
 
     @property
     def _get_data(self) -> List[Dict]:
-        sheet = ExtractDados(self._get_sheet_dir)
+        sheet = SheetHandler(self._get_sheet_dir)
         sheet.read_sheet()
         return sheet.data
 
