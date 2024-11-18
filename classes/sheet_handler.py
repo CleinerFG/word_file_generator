@@ -31,16 +31,6 @@ class SheetHandler:
         """
         return self._dir
 
-    @dir.setter
-    def dir(self, value: str):
-        """
-        Sets a new directory path for the Excel sheet.
-        
-        Args:
-            value (str): The new directory path to set.
-        """
-        self._dir = value
-
     @property
     def data(self) -> List[Dict]:
         """
@@ -88,17 +78,3 @@ class SheetHandler:
             self.data = self.__normalize_data()
         except FileNotFoundError:
             print('The directory for the sheet is incorrect!')
-
-    def printdata(self) -> None:
-        """
-        Prints the extracted data. 
-        Each row is printed with key-value pairs. If no data is available, 
-        prints 'No data'.
-        """
-        if self._data:
-            for row in self._data:
-                for k,v in row.items():
-                    print(f'{k}: {v}', end=' ')
-                print('\n')
-        else:
-            print('No data')
