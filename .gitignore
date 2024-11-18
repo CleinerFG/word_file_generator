@@ -1,5 +1,2 @@
-Lib/
-Scripts/
-.idea/
-pyvenv.cfg
-__pycache__
+.venv
+output
