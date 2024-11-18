@@ -1,6 +1,5 @@
 from classes.app import App
 
-# Example of application usage
+app = App(outfile="Commitment Term", template_name="commitment_term", sheet_name="students_list")
 
-app = App("OS", "Template-os", "data-info")
 app.build()
